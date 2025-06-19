@@ -24,7 +24,8 @@
 
     <div class="list-wrapper">
       <ul class="todo-list">
-        <li id="todo" v-for="(element, index) in todoList" class="todo" @click="isDone">
+        <li id="todo" v-for="(element, index) in todoList" @click="toggle(index)" class="todo"
+          :class="element.done ? 'done' : ''" @click="isDone">
           {{element.text}}
           <i class="fa-solid fa-xmark" @click="deleteTodo(index)"></i>
         </li>
