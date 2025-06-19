@@ -7,11 +7,11 @@ const app = new Vue({
     todoList: [
       {
         text: 'Fare i compiti',
-        done: 'true'
+        done: 'false'
       },
       {
         text: 'Fare la spesa',
-        done: 'false'
+        done: 'true'
       },
       {
         text: 'Fare le pulizie',
@@ -22,9 +22,9 @@ const app = new Vue({
   methods: {
     isDone: function () {
       const duty = document.getElementById("todo");
-      if (this.todoList.done === true) {
-        duty.classList.toggle(" done");
-      }
+      // if (this.todoList.done === true) {
+      duty.classList.toggle("done");
+      // }
     },
     addTodo: function () {
       if (this.newTodo !== '') {
