@@ -8,6 +8,10 @@ ul, ol {
   list-style: none;
 }
 
+li {
+  cursor: pointer;
+}
+
 .todo-input-wrapper {
   background-color: #ddd;
   padding: 20px;
@@ -50,4 +54,9 @@ input[type="button"] {
   border: 1px solid #aaa;
   border-radius: 8px;
   padding: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #aaa;
 }

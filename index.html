@@ -24,8 +24,8 @@
 
     <div class="list-wrapper">
       <ul class="todo-list">
-        <li v-for="(element, index) in todoList" class="todo">
-          {{element}}
+        <li id="todo" v-for="(element, index) in todoList" class="todo" @click="isDone">
+          {{element.text}}
           <i class="fa-solid fa-xmark" @click="deleteTodo(index)"></i>
         </li>
       </ul>
@@ -35,7 +35,9 @@
 
 
 
-  <script src="js/app.js"></script>
+  <!-- <script src="js/app.js"></script> -->
+  <script src="js/app2.js"></script>
+
 </body>
 
 </html>
