@@ -22,6 +22,9 @@ const app = new Vue({
   methods: {
     toggle: function (i) {
       const { done } = this.todoList[i];
+      console.log(done);
+
+      this.todoList[i].done = !done
     },
     addTodo: function () {
       if (this.newTodo !== '') {
@@ -30,7 +33,16 @@ const app = new Vue({
       }
     },
     deleteTodo: function (i) {
-      this.todoList.splice(i, 1);
+      const { done } = this.todoList[i];
+      if (done) {
+        this.todoList.splice(i, 1);
+      } else {
+        const res = confirm('La task non è completata. Sei sicurto di volerla cancellare?');
+        console.log(res);
+        if (res) {
+          this.todoList.splice(i, 1);
+        }
+      }
     },
   },
 })
